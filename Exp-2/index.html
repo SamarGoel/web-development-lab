@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samar Goel - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #141414;
+            color: #fff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        .hero-gradient {
+            background: linear-gradient(180deg, rgba(20,20,20,0.2) 0%, rgba(20,20,20,0.9) 85%, #141414 100%);
+        }
+        .card-hover:hover {
+            transform: scale(1.05);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-[#141414]">
+    <!-- Navbar -->
+    <nav class="flex items-center justify-between px-8 py-4 bg-gradient-to-b from-black/90 to-transparent fixed top-0 w-full z-50">
+        <div class="flex items-center gap-8">
+            <span class="text-red-600 font-extrabold text-2xl tracking-wider">SAMAR GOEL</span>
+            <div class="hidden md:flex gap-6 text-sm text-gray-300">
+                <a href="#home" class="hover:text-white transition">Home</a>
+                <a href="#about" class="hover:text-white transition">About</a>
+                <a href="#skills" class="hover:text-white transition">Skills</a>
+                <a href="#projects" class="hover:text-white transition">Projects</a>
+                <a href="#contact" class="hover:text-white transition">Contact</a>
+            </div>
+        </div>
+        <div class="flex items-center gap-4">
+            <a href="https://github.com/SamarGoel" target="_blank" class="text-gray-300 hover:text-white text-lg"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/samar-goel-068114368/" target="_blank" class="text-gray-300 hover:text-white text-lg"><i class="fab fa-linkedin"></i></a>
+            <a href="https://leetcode.com/u/SamarGoel/" target="_blank" class="text-yellow-500 hover:text-yellow-400 text-lg font-bold"><i class="fas fa-code"></i></a>
+            <div class="w-8 h-8 rounded bg-red-600 flex items-center justify-center font-bold text-sm">SG</div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative pt-32 pb-20 px-8 md:px-16 min-h-[75vh] flex flex-col justify-center bg-cover bg-center" style="background-image: linear-gradient(to right, rgba(0,0,0,0.85) 40%, rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1400&q=80');">
+        <div class="max-w-2xl z-10">
+            <div class="inline-block px-3 py-1 bg-red-600/30 border border-red-500 text-red-400 text-xs font-semibold rounded-full mb-4">
+                DATA SCIENCE & WEB DEVELOPMENT
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-4 leading-tight">
+                Samar Goel
+            </h1>
+            <p class="text-base md:text-lg text-gray-300 mb-6 leading-relaxed">
+                B.Tech CSE (Data Science) student focused on DSA, Web Development, and Machine Learning. Passionate about applying analytical problem-solving and modern web engineering into impactful projects.
+            </p>
+            <div class="flex flex-wrap gap-4">
+                <a href="#resume" class="bg-white text-black font-semibold px-6 py-2.5 rounded flex items-center gap-2 hover:bg-gray-200 transition">
+                    <i class="fas fa-file-alt"></i> Resume
+                </a>
+                <a href="https://linkedin.com/in/samar-goel-068114368/" target="_blank" class="bg-gray-600/80 text-white font-semibold px-6 py-2.5 rounded flex items-center gap-2 hover:bg-gray-600 transition">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://leetcode.com/u/SamarGoel/" target="_blank" class="bg-gray-800 text-yellow-400 border border-yellow-500/50 font-semibold px-6 py-2.5 rounded flex items-center gap-2 hover:bg-gray-700 transition">
+                    <i class="fas fa-code"></i> LeetCode Profile
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Top Picks / Projects -->
+    <div class="px-8 md:px-16 py-10" id="projects">
+        <h2 class="text-xl md:text-2xl font-bold text-white mb-6">Today's Top Picks for Recruiter</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-[#1f1f1f] rounded-lg overflow-hidden border border-gray-800 card-hover">
+                <div class="h-36 bg-gradient-to-tr from-blue-900 to-indigo-700 flex items-center justify-center p-4">
+                    <i class="fas fa-chart-line text-4xl text-blue-200"></i>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-bold text-lg mb-1">Data Analysis & ML Exploration</h3>
+                    <p class="text-xs text-gray-400 mb-3">NumPy, Pandas, Matplotlib, Scikit-learn</p>
+                    <p class="text-sm text-gray-300">Exploratory data analysis, statistical preprocessing, and baseline machine learning model evaluation.</p>
+                </div>
+            </div>
+            <div class="bg-[#1f1f1f] rounded-lg overflow-hidden border border-gray-800 card-hover">
+                <div class="h-36 bg-gradient-to-tr from-purple-900 to-pink-700 flex items-center justify-center p-4">
+                    <i class="fas fa-globe text-4xl text-purple-200"></i>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-bold text-lg mb-1">Web Development Lab Suite</h3>
+                    <p class="text-xs text-gray-400 mb-3">HTML5, CSS3, JavaScript, React, Node.js</p>
+                    <p class="text-sm text-gray-300">Complete suite of 8 interactive web applications featuring DOM manipulation, APIs, React SPA, and Express REST APIs.</p>
+                </div>
+            </div>
+            <div class="bg-[#1f1f1f] rounded-lg overflow-hidden border border-gray-800 card-hover">
+                <div class="h-36 bg-gradient-to-tr from-emerald-900 to-teal-700 flex items-center justify-center p-4">
+                    <i class="fas fa-terminal text-4xl text-emerald-200"></i>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-bold text-lg mb-1">DSA & Problem Solving</h3>
+                    <p class="text-xs text-gray-400 mb-3">C++, Python, LeetCode</p>
+                    <p class="text-sm text-gray-300">Array algorithms, string patterns, two-pointer techniques, and algorithmic data structures.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Skills Section -->
+    <div class="px-8 md:px-16 py-10 bg-[#101010]" id="skills">
+        <h2 class="text-xl md:text-2xl font-bold text-white mb-6">Core Competencies & Skills</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            <div class="bg-[#181818] p-4 rounded border border-gray-800 text-center">
+                <div class="text-blue-400 font-bold mb-1">Languages</div>
+                <div class="text-xs text-gray-300">Python, C, C++, JavaScript</div>
+            </div>
+            <div class="bg-[#181818] p-4 rounded border border-gray-800 text-center">
+                <div class="text-emerald-400 font-bold mb-1">Data Science</div>
+                <div class="text-xs text-gray-300">NumPy, Pandas, Scikit-learn, Matplotlib</div>
+            </div>
+            <div class="bg-[#181818] p-4 rounded border border-gray-800 text-center">
+                <div class="text-amber-400 font-bold mb-1">Web Technologies</div>
+                <div class="text-xs text-gray-300">HTML5, CSS3, React, Tailwind, Express</div>
+            </div>
+            <div class="bg-[#181818] p-4 rounded border border-gray-800 text-center">
+                <div class="text-purple-400 font-bold mb-1">Tools & Platforms</div>
+                <div class="text-xs text-gray-300">VS Code, Git, GitHub, Jupyter, Colab</div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center py-8 text-gray-500 text-sm border-t border-gray-900">
+        &copy; 2025 Samar Goel. Portfolio | JSS University, Noida
+    </footer>
+</body>
+</html>

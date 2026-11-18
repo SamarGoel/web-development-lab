@@ -1,0 +1,3 @@
+﻿# Web Design Experiment 4
+
+Optimize a given webpage for SEO and accessibility by implementing semantic HTML, proper heading structure, and meta tags.

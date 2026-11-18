@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Notes App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState } = React;
+
+        function NoteCard({ note, onEdit, onDelete }) {
+            return (
+                <div className="note-card">
+                    <h3>{note.title}</h3>
+                    <p>{note.content}</p>
+                    <div className="note-actions">
+                        <button className="edit-btn" onClick={() => onEdit(note.id)}>Edit</button>
+                        <button className="delete-btn" onClick={() => onDelete(note.id)}>Delete</button>
+                    </div>
+                </div>
+            );
+        }
+
+        function App() {
+            const [notes, setNotes] = useState([
+                { id: 1, title: "Data Science Assignment", content: "Complete exploratory data analysis on NumPy and Pandas datasets." },
+                { id: 2, title: "Web Tech Lab Report", content: "Review all 8 experiments, code listings, and GitHub Pages links." }
+            ]);
+            const [title, setTitle] = useState("");
+            const [content, setContent] = useState("");
+
+            function addNote() {
+                if (title.trim() === "" || content.trim() === "") {
+                    alert("Please enter both title and content.");
+                    return;
+                }
+                const newNote = {
+                    id: Date.now(),
+                    title: title,
+                    content: content
+                };
+                setNotes([...notes, newNote]);
+                setTitle("");
+                setContent("");
+            }
+
+            function editNote(id) {
+                const note = notes.find(n => n.id === id);
+                const newTitle = prompt("Edit title:", note.title);
+                if (newTitle === null) return;
+                const newContent = prompt("Edit content:", note.content);
+                if (newContent === null) return;
+
+                setNotes(notes.map(n => {
+                    if (n.id === id) {
+                        return { ...n, title: newTitle, content: newContent };
+                    }
+                    return n;
+                }));
+            }
+
+            function deleteNote(id) {
+                setNotes(notes.filter(n => n.id !== id));
+            }
+
+            return (
+                <div className="container">
+                    <h1>My Notes App</h1>
+                    <div className="input-section">
+                        <input
+                            type="text"
+                            placeholder="Note title..."
+                            value={title}
+                            onChange={(e) => setTitle(e.target.value)}
+                        />
+                        <textarea
+                            placeholder="Note content..."
+                            value={content}
+                            onChange={(e) => setContent(e.target.value)}
+                            rows="4"
+                        ></textarea>
+                        <button className="add-btn" onClick={addNote}>Add Note</button>
+                    </div>
+                    <div className="notes-grid">
+                        {notes.length === 0 && <p className="empty-msg">No notes yet. Add one above!</p>}
+                        {notes.map(note => (
+                            <NoteCard
+                                key={note.id}
+                                note={note}
+                                onEdit={editNote}
+                                onDelete={deleteNote}
+                            />
+                        ))}
+                    </div>
+                </div>
+            );
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+        root.render(<App />);
+    </script>
+</body>
+</html>

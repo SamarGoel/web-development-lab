@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">MyBlog</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner -->
+    <header class="banner text-center text-white py-5">
+        <div class="container">
+            <h1>Welcome to My Blog</h1>
+            <p class="lead">Thoughts, tutorials, and stories from a web dev student</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container my-4">
+        <div class="row">
+            <!-- Blog Posts -->
+            <div class="col-md-8">
+                <h2 class="mb-4">Latest Posts</h2>
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-12 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Getting Started with HTML</h5>
+                                <p class="text-muted">November 10, 2024</p>
+                                <p class="card-text">HTML is the backbone of every website. In this post we cover the basic tags and structure you need to know.</p>
+                                <a href="#" class="btn btn-primary btn-sm">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-12 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">CSS Tips for Beginners</h5>
+                                <p class="text-muted">November 15, 2024</p>
+                                <p class="card-text">Learn how to style your pages with CSS. We go through selectors, colors, fonts, and the box model.</p>
+                                <a href="#" class="btn btn-primary btn-sm">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-12 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Why Bootstrap is Useful</h5>
+                                <p class="text-muted">November 20, 2024</p>
+                                <p class="card-text">Bootstrap makes responsive design easy. Here's a quick guide on how to use the grid system and components.</p>
+                                <a href="#" class="btn btn-primary btn-sm">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-12 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">JavaScript Basics</h5>
+                                <p class="text-muted">November 25, 2024</p>
+                                <p class="card-text">JavaScript adds interactivity to your website. This post covers variables, functions, and DOM manipulation.</p>
+                                <a href="#" class="btn btn-primary btn-sm">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-md-4">
+                <div class="sidebar-section mb-4">
+                    <h4>About</h4>
+                    <p>Hi! I'm a web development student sharing what I learn along the way. This blog covers HTML, CSS, JavaScript, and more.</p>
+                </div>
+                <div class="sidebar-section">
+                    <h4>Categories</h4>
+                    <ul class="list-group">
+                        <li class="list-group-item">HTML</li>
+                        <li class="list-group-item">CSS</li>
+                        <li class="list-group-item">JavaScript</li>
+                        <li class="list-group-item">Bootstrap</li>
+                        <li class="list-group-item">Projects</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-4">
+        <p class="mb-0">&copy; 2024 MyBlog. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
