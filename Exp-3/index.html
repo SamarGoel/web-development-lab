@@ -13,7 +13,14 @@
             <input type="text" id="taskInput" placeholder="Enter a new task...">
             <button id="addBtn">Add</button>
         </div>
-        <ul id="taskList"></ul>
+        <ul id="taskList">
+            <li><input type="checkbox"><span>Study Machine Learning</span><button class="delete-btn">Delete</button></li>
+            <li><input type="checkbox"><span>Complete Web Designing Lab Report</span><button class="delete-btn">Delete</button></li>
+            <li class="completed"><input type="checkbox" checked><span style="text-decoration: line-through; color: #999;">Setup GitHub Repository</span><button class="delete-btn">Delete</button></li>
+            <li><input type="checkbox"><span>Solve LeetCode Daily Problem</span><button class="delete-btn">Delete</button></li>
+            <li><input type="checkbox"><span>Review NumPy & Pandas</span><button class="delete-btn">Delete</button></li>
+            <li><input type="checkbox"><span>React Project Practice</span><button class="delete-btn">Delete</button></li>
+        </ul>
     </div>
     <script src="script.js"></script>
 </body>

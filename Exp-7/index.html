@@ -10,7 +10,19 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 <body>
-    <div id="root"></div>
+    <div id="root">
+        <div class="container">
+            <h1>My Notes App</h1>
+            <div class="input-section">
+                <input type="text" placeholder="Note title..." />
+                <textarea placeholder="Note content..." rows="4"></textarea>
+                <button class="add-btn">Add Note</button>
+            </div>
+            <div class="notes-grid">
+                <p class="empty-msg">No notes yet. Add one above!</p>
+            </div>
+        </div>
+    </div>
 
     <script type="text/babel">
         const { useState } = React;
@@ -29,10 +41,7 @@
         }
 
         function App() {
-            const [notes, setNotes] = useState([
-                { id: 1, title: "Data Science Assignment", content: "Complete exploratory data analysis on NumPy and Pandas datasets." },
-                { id: 2, title: "Web Tech Lab Report", content: "Review all 8 experiments, code listings, and GitHub Pages links." }
-            ]);
+            const [notes, setNotes] = useState([]);
             const [title, setTitle] = useState("");
             const [content, setContent] = useState("");
 
@@ -73,7 +82,7 @@
             return (
                 <div className="container">
                     <h1>My Notes App</h1>
-                    <div className="input-section">
+                    <div class="input-section">
                         <input
                             type="text"
                             placeholder="Note title..."
@@ -103,8 +112,10 @@
             );
         }
 
-        const root = ReactDOM.createRoot(document.getElementById("root"));
-        root.render(<App />);
+        if (window.ReactDOM && window.ReactDOM.createRoot) {
+            const root = ReactDOM.createRoot(document.getElementById("root"));
+            root.render(<App />);
+        }
     </script>
 </body>
 </html>
